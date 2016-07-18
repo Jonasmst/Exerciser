@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upper body 1"
+        android:padding="8dp"
+        android:textSize="28sp"
+        android:id="@+id/RoutineFragment.routine_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        />
+
+    <!-- A single exercise -->
+    <LinearLayout
+        android:id="@+id/RoutineFragment.single_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/RoutineFragment.routine_name"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        >
+
+        <!-- Name -->
+        <EditText
+            android:id="@+id/RoutineFragment.exercise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Exercise name"
+            android:textSize="22sp"
+            />
+
+        <!-- Sets -->
+        <EditText
+            android:id="@+id/RoutineFragment.number_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="3"
+            android:minEms="3"
+            android:maxEms="3"
+            android:hint="# sets"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            />
+
+        <!-- X -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            />
+
+        <!-- Reps -->
+        <EditText
+            android:id="@+id/RoutineFragment.number_reps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="3"
+            android:minEms="3"
+            android:maxEms="3"
+            android:hint="# reps"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            />
+
+        <!-- Weight -->
+        <EditText
+            android:id="@+id/RoutineFragment.number_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="3"
+            android:minEms="3"
+            android:maxEms="3"
+            android:hint="weight"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/RoutineFragment.saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RoutineFragment.single_exercise"
+        android:text="Save"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:id="@+id/RoutineFragment.db_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RoutineFragment.saveButton"
+        android:text="DB"
+        />
+
+
+
+</RelativeLayout>

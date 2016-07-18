@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ExerciseListFragment.mainLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Recycler views succeed ListViews -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ExerciseListFragment.recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/ExerciseListFragment.newButton"
+        app:fabSize="normal"
+        app:layout_behavior="com.androiddev.jonas.exerciser.ScrollAwareFABBehavior"
+        android:src="@drawable/ic_plus_white_48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:elevation="8dp"
+        app:layout_anchor="@id/ExerciseListFragment.recyclerView"
+        app:layout_anchorGravity="bottom|right|end"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
+
+<!--
+<android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+            >
+
+            *EditText*
+
+</android.support.design.widget.TextInputLayout>
+
+-->

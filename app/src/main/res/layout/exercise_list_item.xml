@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ExerciseListItem.root"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical|start"
+    android:paddingTop="8dp"
+    >
+
+    <!-- Exercise text -->
+    <TextView
+        android:id="@+id/ExerciseListItem.text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="This is the title"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="72dp"
+        />
+
+    <!-- Description/optional text -->
+    <TextView
+        android:id="@+id/ExerciseListItem.subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtitle"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="14sp"
+        android:layout_below="@+id/ExerciseListItem.text"
+        android:textColor="@android:color/secondary_text_light"
+        android:paddingStart="17dp"
+        android:paddingEnd="72dp"
+        />
+
+    <!-- Edit button -->
+    <Button
+        android:id="@+id/ExerciseListItem.editButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@android:drawable/ic_menu_edit"
+        android:tint="@color/PrimaryColor"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="16dp"
+        />
+
+</RelativeLayout>

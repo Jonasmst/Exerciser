@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ExerciseAddFragment.mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- Name -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ExerciseAddFragment.nameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+            >
+
+            <EditText
+                android:id="@+id/ExerciseAddFragment.name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Exercise name"
+                android:inputType="textCapSentences"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!-- Description -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ExerciseAddFragment.descContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+            android:layout_below="@+id/ExerciseAddFragment.nameContainer"
+            >
+
+            <EditText
+                android:id="@+id/ExerciseAddFragment.description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Exercise description"
+                android:inputType="textCapSentences"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!-- Layout for sets and reps -->
+        <LinearLayout
+            android:id="@+id/ExerciseAddFragment.ll.setsandreps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ExerciseAddFragment.descContainer"
+            android:paddingTop="24dp"
+            android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+            >
+
+            <!-- Container for sets -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                >
+
+                <!-- ET for sets -->
+                <EditText
+                    android:id="@+id/ExerciseAddFragment.sets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sets"
+                    android:inputType="number"
+                    />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Container for reps -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                >
+
+                <!-- ET for reps -->
+                <EditText
+                    android:id="@+id/ExerciseAddFragment.reps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reps"
+                    android:inputType="number"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- Layout for quant and metric -->
+        <LinearLayout
+            android:id="@+id/ExerciseAddFragment.ll.quantandmetric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ExerciseAddFragment.ll.setsandreps"
+            android:paddingTop="24dp"
+            android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+            >
+
+            <!-- Container for quant -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingRight"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                >
+
+                <!-- ET for quantity (weight/distance) -->
+                <EditText
+                    android:id="@+id/ExerciseAddFragment.quant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Weight"
+                    android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Spinner for metric selection -->
+            <Spinner
+                android:id="@+id/ExerciseAddFragment.metric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/MetricChoices"
+                android:spinnerMode="dropdown"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_gravity="bottom"
+                >
+            </Spinner>
+
+
+        </LinearLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/ExerciseAddFragment.addButton"
+            app:fabSize="normal"
+            android:src="@drawable/ic_check_white_48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:elevation="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+    <!--
+    <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+                >
+
+                *EditText*
+
+    </android.support.design.widget.TextInputLayout>
+
+    -->

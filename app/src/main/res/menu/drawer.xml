@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/routines"
+            android:checked="false"
+            android:icon="@drawable/rod_barbells_96"
+            android:title="Routines" />
+
+        <item
+            android:id="@+id/exercises"
+            android:checked="false"
+            android:icon="@drawable/dumbbell_96"
+            android:title="Exercises" />
+
+        <item
+            android:id="@+id/progress"
+            android:checked="false"
+            android:icon="@drawable/line_chart"
+            android:title="Progress" />
+
+    </group>
+</menu>

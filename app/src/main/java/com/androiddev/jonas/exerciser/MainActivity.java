@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private String fragmentTransactionMessage;
 
+    // TODO: Implement Routines!
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
